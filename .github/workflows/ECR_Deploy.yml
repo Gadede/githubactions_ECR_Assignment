@@ -59,4 +59,4 @@ jobs:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: myresumeapp_td-service
         cluster: resume_app_cluster
-        wait-for-service-stability: false
+        wait-for-service-stability: true

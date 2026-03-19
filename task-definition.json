@@ -1,5 +1,5 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:106601314275:task-definition/myresumeapp_td:4",
+  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:106601314275:task-definition/myresumeapp_td:9",
   "containerDefinitions": [
     {
       "name": "richy_resume_container",
@@ -18,10 +18,8 @@
       ],
       "essential": true,
       "environment": [],
-      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
-      "ulimits": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -29,8 +27,7 @@
           "awslogs-create-group": "true",
           "awslogs-region": "ap-southeast-1",
           "awslogs-stream-prefix": "ecs"
-        },
-        "secretOptions": []
+        }
       },
       "systemControls": []
     }
@@ -39,7 +36,7 @@
   "taskRoleArn": "arn:aws:iam::106601314275:role/ecsTaskExecutionRole",
   "executionRoleArn": "arn:aws:iam::106601314275:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 4,
+  "revision": 9,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -89,8 +86,8 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2026-03-19T22:06:00.838Z",
-  "registeredBy": "arn:aws:iam::106601314275:user/AdminRichy",
+  "registeredAt": "2026-03-19T23:08:35.335Z",
+  "registeredBy": "arn:aws:sts::106601314275:assumed-role/github-actions-role/GitHubActions",
   "enableFaultInjection": false,
   "tags": []
 }

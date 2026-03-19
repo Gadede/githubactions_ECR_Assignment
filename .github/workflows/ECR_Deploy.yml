@@ -57,6 +57,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v2.6.0
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: myresumeapp_td-service
-        cluster: resume_app_cluster
+        service: service
+        cluster: cluster
         wait-for-service-stability: true

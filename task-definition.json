@@ -1,12 +1,12 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:106601314275:task-definition/myresumeapp_td:9",
+  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:106601314275:task-definition/myresumeapp_td:11",
   "containerDefinitions": [
     {
       "name": "richy_resume_container",
       "image": "106601314275.dkr.ecr.ap-southeast-1.amazonaws.com/jomacs-githubactions-assignment-repo:latest",
       "cpu": 1024,
-      "memory": 3072,
-      "memoryReservation": 1024,
+      "memory": 2048,
+      "memoryReservation": 2048,
       "portMappings": [
         {
           "name": "richy_resume_container-80-tcp",
@@ -18,8 +18,10 @@
       ],
       "essential": true,
       "environment": [],
+      "environmentFiles": [],
       "mountPoints": [],
       "volumesFrom": [],
+      "ulimits": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -27,7 +29,8 @@
           "awslogs-create-group": "true",
           "awslogs-region": "ap-southeast-1",
           "awslogs-stream-prefix": "ecs"
-        }
+        },
+        "secretOptions": []
       },
       "systemControls": []
     }
@@ -36,7 +39,7 @@
   "taskRoleArn": "arn:aws:iam::106601314275:role/ecsTaskExecutionRole",
   "executionRoleArn": "arn:aws:iam::106601314275:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
-  "revision": 9,
+  "revision": 11,
   "volumes": [],
   "status": "ACTIVE",
   "requiresAttributes": [
@@ -78,7 +81,7 @@
     "MANAGED_INSTANCES"
   ],
   "requiresCompatibilities": [
-    "FARGATE"
+    "EC2"
   ],
   "cpu": "1024",
   "memory": "3072",
@@ -86,8 +89,8 @@
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "registeredAt": "2026-03-19T23:08:35.335Z",
-  "registeredBy": "arn:aws:sts::106601314275:assumed-role/github-actions-role/GitHubActions",
+  "registeredAt": "2026-03-19T23:26:53.753Z",
+  "registeredBy": "arn:aws:iam::106601314275:user/AdminRichy",
   "enableFaultInjection": false,
   "tags": []
 }

@@ -31,7 +31,6 @@ jobs:
 
     - name: Build Docker image
       id: build-image
-      working-directory: githubactions_ECR_Assignment
       run: |
         docker build -t ${{ secrets.ECR_REPOSITORY_URI }}:latest .
 
@@ -47,7 +46,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: githubactions_ECR_Assignment/task-definition.json
+        task-definition: task-definition.json
         container-name: ${{ secrets.CONTAINER_NAME }} 
         image: ${{ secrets.ECR_REPOSITORY_URI }}:latest
 

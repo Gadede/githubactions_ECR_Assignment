@@ -52,9 +52,9 @@ jobs:
 
     - name: Debug Rendered Task Definition
       run: cat ${{ steps.task-def.outputs.task-definition }}  
-      
+
     - name: Deploy Amazon ECS task definition
-      uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v2.6.0
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: ${{ secrets.ECS_SERVICE }}
